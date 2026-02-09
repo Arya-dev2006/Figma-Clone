@@ -20,3 +20,31 @@ setView(state.view);
 openEditorButton.addEventListener('click',()=>{
     window.location.hash ='/editor';
 })
+let targetX = 50;
+let targetY = 50;
+
+let currentX = 50;
+let currentY = 50;
+
+
+landingPage.addEventListener("mousemove", (e) => {
+  const rect = landingPage.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  targetX = (x / rect.width) * 100;
+  targetY = (y / rect.height) * 100;
+});
+
+function animate() {
+  currentX += (targetX - currentX) * 0.12;
+  currentY += (targetY - currentY) * 0.12;
+
+  landingPage.style.setProperty("--x", currentX + "%");
+  landingPage.style.setProperty("--y", currentY + "%");
+
+  requestAnimationFrame(animate);
+}
+
+animate();
