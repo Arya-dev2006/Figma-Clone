@@ -6,22 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma</title>
     <link rel="stylesheet" href="./Styles/scss/base.css">
+      <link rel="stylesheet" href="./Styles/scss/landing.css">
+     <link rel="stylesheet" href="./Styles/scss/editor.css">
 </head>
 
 <body>
     <div id="app">
         <section id="landing-page" class="landing">
+            <div id="nav">
+                <div class="trade-mark">
+                    <h1>Fogma Design</h1>
+                </div>
+                <div class="links">
+                    <h4>Home</h4>
+                    <h4>Blogs</h4>
+                    <h4>GitHub</h4>
+                    <h4>Linkdin</h4>
+                </div>
+            </div>
             <div class="landing-bg"></div>
+            <div class="landing-overlay"></div>
             <div class="landing-content">
-                <h1>Figma Clone</h1>
-                <p>Design. Create. Build.</p>
+                <h1>Fogma Design</h1>
+                <h1>Design without friction</h1>
+                <p>CA lightweight, browser-based design playground inspired by Figma.
+                    Built from scratch using pure JavaScript — no frameworks, no magic.</p>
                 <button id="open-editor-btn">Open Editor</button>
             </div>
         </section>
 
+
+
+
+
+
         <section id="editor-page">
-            <h2>Editor</h2>
-            <p>Canvas will live here</p>
+            <div class="editor">
+                <div class="editor-tools"></div>
+                <div class="editor-canvas" id="canvas"></div>
+                <div class="editor-properties"></div>
+            </div>
+
         </section>
     </div>
     <script src="./scripts/store.js"></script>

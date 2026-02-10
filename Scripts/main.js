@@ -2,6 +2,7 @@ console.log("app started");
 let landingPage = document.querySelector('#landing-page');
 let editorPage = document.querySelector('#editor-page')
 let openEditorButton = document.querySelector("#open-editor-btn");
+let canvas = document.querySelector("#canvas")
 function setView(viewName){
     if(viewName === "landing"){
         editorPage.style.display ="none"
@@ -48,3 +49,8 @@ function animate() {
 }
 
 animate();
+
+
+canvas.addEventListener('mousedown',(e)=>{
+    console.log(e);
+})
